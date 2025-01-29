@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Books{% endblock %}
+{% block content %}
+<!--========================= Books Sections ========================-->
+<section id="resume" class="grey-section" style="text-align:justify; margin-top: 20px;">
+    <div class="row section-intro">
+       <div class="col-twelve">
+         <h5>Our Goal</h5>
+         <p class="lead">To Provide Students a Peaceful and Encouraging Study Environment.</p>
+       </div>   		
+     </div> <!-- /section-intro--> 
+    <div class="row section-intro resume-timeline">
+      <div class="resume-header">
+       <h2>Books Listed Below</h2>
+      </div> <!-- /resume-header -->
+      <div style="margin-top: 10px;">
+        {% for book in s2books %}
+                  <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ book.book_title }}</h5>
+                        <p class="card-text"><small class="text-muted">by {{ book.author }}</small></p>
+                        <p class="card-text">Available: {{ book.available }}</p>
+                    </div>
+                  </div>    
+        {% endfor %}  
+      </div>
+    </div> <!-- /resume-timeline -->
+</section>
+
+{% endblock %}

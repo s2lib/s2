@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}News{% endblock %}
+{% block content %}
+<!--========================= News Sections ========================-->
+<section id="resume" class="grey-section" style="text-align:justify; margin-top: 20px;">
+  <div class="row section-intro">
+      <div class="col-twelve">
+          <h5>Latest News</h5>
+          <p class="lead">Stay updated with the latest educational news.</p>
+      </div>
+  </div>
+  <div class="row section-intro resume-timeline">
+    <div class="resume-header">
+      <h2>Books Listed Below</h2>
+     </div> <!-- /resume-header -->
+     <div style="margin-top: 10px;">
+        {% for article in news_articles %}
+        <div class="card mb-4" style="max-width: 540px; margin: 10px auto; display: flex; border: 1px solid #ddd; border-radius: 8px;">
+            {% if article.urlToImage %}
+              <img src="{{ article.urlToImage }}" class="card-img-top" alt="News Image" style="width: 100%; max-height: 200px; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+            {% else %}
+              <img src="https://via.placeholder.com/540x200?text=No+Image+Available" class="card-img-top" alt="No Image" style="width: 100%; max-height: 200px; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+            {% endif %}
+            <div class="card-body" style="padding: 15px;">
+                <h5 class="card-title" style="font-weight: bold; color: #F5BD02;">{{ article.title }}</h5>
+                <p class="card-text" style="color: #555;">{{ article.description|truncatechars:100 }}</p>
+                <a href="{{ article.url }}" target="_blank" class="btn btn-primary" style="background-color: #007bff; border: none;">Read More</a>
+            </div>
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+</section>
+
+{% endblock %}

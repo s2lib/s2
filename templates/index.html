@@ -1,0 +1,345 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<!--================Header Section End================-->
+<!-- =============== Main Banner ========================-->
+  <div class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        
+            <div class="col-lg-12 align-self-center">
+              <div class="owl-carousel owl-banner">
+                <div class="item header-text">
+                  {% if user.is_authenticated %}
+                    <h6>Hello {{user.username}}, Welcome!</h6>
+                    <h2><em>Smart</em> <span>Study</span> <span>Smart</span><em> Future</em></h2>
+                    <p>We trust, you love to gain knowledge!</p>
+                  {% else %}
+                    <h6>Hi there, Welcome!</h6>
+                    <h2><em>Smart</em> <span>Study</span> <span>Smart</span><em> Future</em></h2>
+                    <p>Your Gateway to Knowledge and Learning - An elegant place for scholarly activities.<br></p>
+                  {% endif %}
+                  <div class="down-buttons">
+                    <div class="main-blue-button-hover">
+                      <a href="/contact">Book Trial Now</a>
+                    </div>
+                    <div class="call-button">
+                      <a href="tel:+917599737480"><i class="fa fa-phone"></i>Call Now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+      </div>
+    </div>
+  </div>
+<!-- ============================= Services ========================== -->
+  <div id="services" class="our-services section">
+    <div class="services-right-dec">
+      <img src="{%static 'assets/assets/images/services-right-dec.png'%}" alt="">
+    </div>
+    <div class="container">
+      <div class="services-left-dec">
+        <img src="{%static 'assets/assets/images/services-left-dec.png'%}" alt="">
+      </div>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>We <em>Provide</em> The Best <span>Facilities</span>, You need!</span></h2>
+            <span>S2 LIBRARY</span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-carousel owl-services">
+            <div class="item">
+              <h4>Best Environment</h4>
+              <div class="icon"><img src="{%static 'assets/assets/images/best-choice.png'%}" alt=""></div>
+              <p>Best Environment for Learning</p>
+            </div>
+            <div class="item">
+              <h4>Learning Resources</h4>
+              <div class="icon"><img src="{%static 'assets/assets/images/certificate.png'%}" alt=""></div>
+              <p>Comprehensive Learning Resources</p>
+            </div>
+            <div class="item">
+              <h4>Open 24/7*</h4>
+              <div class="icon"><img src="{%static 'assets/assets/images/24-7.png'%}" alt=""></div>
+              <p>Library is open for 24/7</p>
+            </div>
+            <div class="item">
+              <h4>Interview Preparation</h4>
+              <div class="icon"><img src="{%static 'assets/assets/images/interview.png'%}" alt=""></div>
+              <p>Interview Preparation Service</p>
+            </div>
+            <div class="item">
+              <h4>Engaging Community</h4>
+              <div class="icon"><img src="{%static 'assets/assets/images/service-icon-04.png'%}" alt=""></div>
+              <p>Engaging Community and Programs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- ============================= Services Section End ========================== -->
+<!-- ============================= About Section ========================== -->
+  <div id="about" class="about-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="left-image">
+            <img src="{%static 'assets/assets/images/about-left-image.png'%}" alt="Two Girls working together">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h2>Join <span>S2 Library</span> and get free <em>certified</em> course*</h2>
+            <p>Be member of Smart Study Library! Get Immediate access to online courses. <a href="{% url 'about' %}">Know More!</a></p>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="fact-item">
+                  <div class="count-area-content">
+                    <div class="icon">
+                      <img src="{%static 'assets/assets/images/book.png'%}" alt="">
+                    </div>
+                    <div class="count-digit">50+</div>
+                    <div class="count-title">Books</div>
+                    <p>Competitive Books.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="fact-item">
+                  <div class="count-area-content">
+                    <div class="icon">
+                      <img src="{%static 'assets/assets/images/certificate.png'%}" alt="">
+                    </div>
+                    <div class="count-digit">100+</div>
+                    <div class="count-title">Courses</div>
+                    <p>Upskilling Courses.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="fact-item">
+                  <div class="count-area-content">
+                    <div class="icon">
+                      <img src="{%static 'assets/assets/images/service.png'%}" alt="">
+                    </div>
+                    <div class="count-digit">50+</div>
+                    <div class="count-title">Happy Students</div>
+                    <p>Enjoying Studying.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ============================= About Section End ========================== -->
+
+  <!-- ============================= Pricing Section ========================== -->
+  <div id="pricing" class="our-pricing pricing-tables">
+    <div class="tables-left-dec">
+      <img src="{%static 'assets/assets/images/tables-left-dec.png'%}" alt="">
+    </div>
+    <div class="tables-right-dec">
+      <img src="{%static 'assets/assets/images/tables-right-dec.png'%}" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h2>Select a suitable <em>time</em> for your uninterrupted <span>Studies</span></h2>
+            <span>Our Plans</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="owl-carousel owl-pricing">
+        <div class="item">
+          <h4>Day</h4>
+          <em>₹700/mon</em>
+          <span>₹500</span>
+          <ul>
+            <li>High-Speed Wi-Fi</li>
+            <li>Fully AC</li>
+            <li>R.O Purified Water</li>
+            <li>24/7 CCTV Surveillance</li>
+            <li>Free Access to Books</li>
+            <li>Mobile/Laptop Charging</li>
+            <li>Daily Newspapers</li>
+            <li>Separate Lunch Area</li>
+            <li>Secure Parking Area</li>
+            <li>Locker Service</li>
+            <li>Audiobooks & e-Books</li>
+            <li>Silent and Clean Study</li>
+          </ul>
+          <div class="main-blue-button-hover">
+            <a href="#">Get Started</a>
+          </div>
+        </div>
+        <div class="item">
+          <h4>Night</h4>
+          <em>₹700/mon</em>
+          <span>₹500</span>
+          <ul>
+            <li>High-Speed Wi-Fi</li>
+            <li>Fully AC</li>
+            <li>R.O Purified Water</li>
+            <li>24/7 CCTV Surveillance</li>
+            <li>Free Access to Books</li>
+            <li>Mobile/Laptop Charging</li>
+            <li>Daily Newspapers</li>
+            <li>Separate Lunch Area</li>
+            <li>Secure Parking Area</li>
+            <li>Locker Service</li>
+            <li>Audiobooks & e-Books</li>
+            <li>Silent and Clean Study</li>
+          </ul>
+          <div class="main-blue-button-hover">
+            <a href="#">Get Started</a>
+          </div>
+        </div>
+        <div class="item">
+          <h4>24 Hrs</h4>
+          <em>₹900/mon</em>
+          <span>₹700</span>
+          <ul>
+            <li>High-Speed Wi-Fi</li>
+            <li>Fully AC</li>
+            <li>R.O Purified Water</li>
+            <li>24/7 CCTV Surveillance</li>
+            <li>Free Access to Books</li>
+            <li>Mobile/Laptop Charging</li>
+            <li>Daily Newspapers</li>
+            <li>Separate Lunch Area</li>
+            <li>Secure Parking Area</li>
+            <li>Locker Service</li>
+            <li>Audiobooks & e-Books</li>
+            <li>Silent and Clean Study</li>
+          </ul>
+          <div class="main-blue-button-hover">
+            <a href="#">Get Started</a>
+          </div>
+        </div>
+        <div class="item">
+          <h4>24 Hrs</h4>
+          <em>₹1200/mon</em>
+          <span>₹900</span>
+          <ul>
+            <li>High-Speed Wi-Fi</li>
+            <li>Fully AC</li>
+            <li>R.O Purified Water</li>
+            <li>24/7 CCTV Surveillance</li>
+            <li>Free Access to Books</li>
+            <li>Mobile/Laptop Charging</li>
+            <li>Daily Newspapers</li>
+            <li>Separate Lunch Area</li>
+            <li>Secure Parking Area</li>
+            <li>Locker Service</li>
+            <li>Audiobooks & e-Books</li>
+            <li>Silent and Clean Study</li>
+          </ul>
+          <div class="main-blue-button-hover">
+            <a href="#">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<!-- ============================= Membership Section End ========================== -->
+
+<!-- ============================= Subsrcibe Section ========================== -->
+<div id="subscribe" class="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="inner-content">
+          <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <h2>Find the perfect book for your need!</h2>
+              <form id="subscribe" action="{% url 'index' %}" method="POST">
+                {% csrf_token %}
+                <input type="text" name="book_name" id="book_name" placeholder="Your Book Name" aria-label="Book Name" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" aria-label="Email Address" required>
+                <button type="submit" id="form-submit" class="main-button">Search</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================= Subscribe Section End ========================== -->
+
+<!-- =============================== contact Sections ============================-->
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="section-heading">
+            <h2>Feel free to <em>Contact</em> us! <br> We'll <span>Love</span> to hear from <em>you</em>.</h2>
+            <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.9160971093324!2d78.06256857402789!3d27.127452550831887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747300231ccb09%3A0x685cee0fbc41a898!2sSmart%20Study%20Library%20(S2%20Library)!5e0!3m2!1sen!2sin!4v1720195369232!5m2!1sen!2sin" width="100%" height="360px" style="border:0;" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="info">
+              <span><i class="fa fa-phone"></i> <a href="tel:+917599737480">Call Now</a></span>
+              <span><i class="fa fa-phone"></i> <a href="tel:+919512454449">Call Now</a></span>
+              <!--<span><i class="fa fa-envelope"></i> <a href="mailto:s2library.in@gmail.com">s2library.in@gmail.com</a></span>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <form id="contact" method="POST" action="{% url 'index' %}">
+            {% csrf_token %}
+              <div class="row">
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="name" name="name" id="name" class="form-control" placeholder="Name" autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="" class="form-control">
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="subject" name="subject" id="subject" placeholder="subject" autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="text" name="message" rows="2" class="form-control" name="message" id="message" placeholder="Please enter your message!" required="">
+                      </fieldset>
+                    </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button">Submit Request</button>
+                    </fieldset>
+                  </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    <div class="contact-dec">
+      <img src="{%static 'assets/assets/images/contact-dec.png'%}" alt="">
+    </div>
+    <div class="contact-left-dec">
+      <img src="{%static 'assets/assets/images/contact-left-dec.png'%}" alt="">
+    </div>
+  </div>
+<!-- ================= contact section end ============================-->
+
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact{% endblock %}
+{% block content %}
+<!-- Contact -->
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="section-heading">
+            <h2>Feel free to <em>Contact</em> us! <br> We'll <span>Love</span> to hear from <em>you</em>.</h2>
+            <div id="map">
+              <iframe title="Smart Study Library Location Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.9160971093324!2d78.06256857402789!3d27.127452550831887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747300231ccb09%3A0x685cee0fbc41a898!2sSmart%20Study%20Library%20(S2%20Library)!5e0!3m2!1sen!2sin!4v1720195369232!5m2!1sen!2sin" width="100%" height="360px" style="border:0;" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="info">
+              <span><i class="fa fa-phone"></i> <a href="tel:+917579794048">+91 75797XXXXX</a></span>
+              <span><i class="fa fa-phone"></i> <a href="tel:+919512454449">+91 95124XXXXX</a></span>
+              <!--<span><i class="fa fa-envelope"></i> <a href="mailto:s2library.in@gmail.com">s2library.in@gmail.com</a></span>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <form id="contact" method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
+              <div class="row">
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="name" name="name" id="name" class="form-control" placeholder="Name" autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email" required="" class="form-control">
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="subject" name="subject" id="subject" placeholder="subject" autocomplete="on" required>
+                      </fieldset>
+                    </div>
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="text" name="message" rows="2" class="form-control" name="message" id="message" placeholder="Please enter your message!" required="">
+                      </fieldset>
+                    </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button">Submit Request</button>
+                    </fieldset>
+                  </div>
+              </div>
+            </form>
+                {% if messages %}
+                  <div class="alert-messages">
+                      {% for message in messages %}
+                          <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+                      {% endfor %}
+                  </div>
+                {% endif %}
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-dec">
+      <img src="{%static 'assets/assets/images/contact-dec.png'%}" alt="">
+    </div>
+    <div class="contact-left-dec">
+      <img src="{%static 'assets/assets/images/contact-left-dec.png'%}" alt="">
+    </div>
+  </div>
+
+  {% endblock %}

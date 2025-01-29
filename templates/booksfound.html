@@ -1,0 +1,14 @@
+<h2>Search Results for "{{ search_query }}"</h2>
+
+{% if books %}
+  <ul>
+    {% for book in books %}
+      <li>
+        <strong>{{ book.title }}</strong> by {{ book.author_name|join:", " }} <br>
+        <a href="https://openlibrary.org{{ book.key }}" target="_blank">View Book</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No books found for your search query.</p>
+{% endif %}

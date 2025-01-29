@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}404 - Page Not Found{% endblock %}
+{% block content %}
+<!-- =============== 404 Error Page with Image on the Side ========================-->
+<div class="container py-5">
+    <div class="row align-items-center">
+        <!-- Error Image on the Left -->
+        <div class="col-md-5 text-center">
+            <img src="{%static 'assets/assets/images/404_1.png'%}" alt="404 Image" class="img-fluid" style="max-width: 70%; max-height: 400px; object-fit: cover;">
+        </div>
+        <!-- Error Message on the Right -->
+        <div class="col-md-7 text-center">
+            <h1 class="display-3 text-danger"><strong>404!</strong></h1>
+            <h2 class="text-muted mb-4">Oops! The page you're looking for cannot be found.</h2>
+
+            {% if user.is_authenticated %}
+                <p class="lead">Hello, {{ user.username }}. It seems like you've stumbled upon a page that no longer exists or has moved.</p>
+            {% else %}
+                <p class="lead">It seems like you've stumbled upon a page that no longer exists or has moved. <br> Looking for a place to study; Don't worry, Got you covered. it's just a click away!  <strong>Contact Now</strong></p>
+            {% endif %}
+
+            <div class="error-actions mt-4">
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg">Contact</a>
+                <a href="javascript:history.back()" class="btn btn-secondary btn-lg">Go Back</a>
+                <a href="{% url 'index' %}" class="btn btn-primary btn-lg">Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

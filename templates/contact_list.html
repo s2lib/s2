@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact List{% endblock %}
+{% block content %}
+<!--About more section-->
+<section id="resume" class="grey-section" style="text-align:justify; margin-top: 20px;">
+      <div class="row section-intro">
+          <div class="col-twelve">
+            <h5>MAILS FROM STUDENTS</h5>
+            <p class="lead">Below are the mail received from site contact!</p>
+          </div>   		
+      </div> <!-- /section-intro--> 
+    <div class="row section-intro resume-timeline">
+      <div class="resume-header">
+        <h2>Contact List</h2>
+      </div> <!-- /resume-header -->
+      <div>
+        <ul>
+            {% for message in messages %}
+                <li>
+                    <strong>{{ message.name }}</strong> ({{ message.email }}) at {{ message.timestamp }}<br>
+                    <strong>Sub: </strong>{{ message.subject }} <br>
+                    <strong>Message: </strong>{{ message.message }}
+                </li>
+                <br>
+            {% endfor %}
+        </ul>
+			</div>
+    </div> <!-- /resume-timeline -->
+</section>
+
+{% endblock %}

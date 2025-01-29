@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Achievers{% endblock %}
+{% block content %}
+<!--========================= Students lists ================================-->
+  <section id="resume" class="grey-section" style="text-align:justify; margin-top: 20px;">
+    <div class="row section-intro">
+        <div class="col-twelve">
+            <h5>Our Goal</h5>
+            <p class="lead">To Provide Students a Peaceful and Encouraging Study Environment.</p>
+        </div>
+    </div>
+    <div class="row section-intro resume-timeline">
+        <div class="resume-header">
+            <h2>Student List</h2>
+        </div>
+        {% if user.is_authenticated %}
+        <div>
+            {% if students %}
+              <div class="s2table-wrapper">
+                <table class="s2table table-striped">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Date of Joining</th>
+                            <th>Status</th>
+                            <th>Phone</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for student in students %}
+                        <tr>
+                            <td>{{ student.first_name }}</td>
+                            <td>{{ student.last_name }}</td>
+                            <td>{{ student.email }}</td>
+                            <td>{{ student.doj }}</td>
+                            <td>{{ student.status }}</td>
+                            <td>{{ student.phone }}</td>
+                            <td>{{ student.address }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>No students found.</p>
+            {% endif %}
+        </div>
+        {% else %}
+        <p>Please Login to See List!</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+
+{% endblock %}

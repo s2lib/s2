@@ -1,0 +1,136 @@
+/* auth.css */
+
+.reg-form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-top: 50px;
+}
+.login-form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.reg-form-container .form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: transparent; /* Make text color transparent */
+    background: linear-gradient(121deg, #03a4ed, #ff685f);
+    background-clip: text; /* For most modern browsers */
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.login-form-container .form-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: transparent; /* Make text color transparent */
+    background: linear-gradient(121deg, #03a4ed, #ff685f);
+    background-clip: text; /* For most modern browsers */
+    -webkit-background-clip: text; /* For Safari */
+    -webkit-text-fill-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+/*updates*/.form-group {
+/*updates*/    width: 100%;
+/*updates*/    margin-bottom: 10px;
+/*updates*/}
+/*updates*/.input-group {
+/*updates*/    width: 100%;
+/*updates*/}
+/*update*/.form-control {
+/*update*/    width: 100%;
+/*update*/    padding: 10px;
+/*update*/    font-size: 16px;
+/*update*/    border-radius: 8px;
+/*update*/    border: 1px solid #ccc;
+/*update*/    margin: 0; /* Remove any margin */
+/*update*/}
+/*update*/.col-md-6 {
+/*update*/    display: flex;
+/*update*/    justify-content: center; /* Centers content horizontally */
+/*update*/    align-items: center; /* Vertically center content */
+/*update*/    flex-direction: column;
+/*update*/}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555555;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff685f 0%, #03a4ed 100%);
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;    
+    display: block; /*udpate*/
+    margin: auto; /*update*/
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #03a4ed 0%, #ff685f 100%);
+}
+
+.auth-footer {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #888;
+    text-align: center;
+}
+
+.auth-footer a {
+    color: #03a4ed;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+    color: #ff685f;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .reg-form-container {
+        background-color: #ffffff;
+        padding: 30px;
+        margin-top: 80px;
+        margin-bottom: 150px;
+    }
+    .login-form-container {
+        background-color: #ffffff;
+        padding: 30px;
+        margin-top: 0px;
+        margin-bottom: -150px;
+    }
+    .image-container {
+        margin-top: 20px;
+        width: auto;
+    }
+}

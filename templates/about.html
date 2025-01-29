@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About{% endblock %}
+{% block content %}
+
+<!--====================== Owner Introduction Section ========================-->
+<section id="owner" class="about-us section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="section-heading">
+          <h2>Meet the Founder: <span>Manish Sharma</span></h2>
+          <p style="text-align: justify;">
+            <strong>Manish Sharma</strong>, a determined student and the founder of S2 Library, turned his personal struggles into a vision for others. Balancing academics and entrepreneurship, Manish created S2 Library with a mission to provide students with the supportive study environment he once sought.  
+            <br><br>Drawing from his own challenges, he designed a space that combines tranquility, accessibility, and the right resources to empower learners. His journey as a student-founder is a testament to his belief that every individual deserves the opportunity to succeed in a peaceful and inspiring atmosphere.
+            <br><a href="#">Connect with Him</a>
+          </p>
+          <!--<div class="row">
+            <div class="col-lg-4">
+              <div class="fact-item">
+                <div class="count-area-content">
+                  <div class="icon">
+                    <img src="{% static 'assets/assets/images/book.png' %}" alt="Books">
+                  </div>
+                  <div class="count-title">Books</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="fact-item">
+                <div class="count-area-content">
+                  <div class="icon">
+                    <img src="{% static 'assets/assets/images/certificate.png' %}" alt="Courses">
+                  </div>
+                  <div class="count-title">Courses</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="fact-item">
+                <div class="count-area-content">
+                  <div class="icon">
+                    <img src="{% static 'assets/assets/images/service.png' %}" alt="Happy Students">
+                  </div>
+                  <div class="count-title">Happy Students</div>
+                </div>
+              </div>
+            </div>
+          </div>-->
+        </div>
+      </div>
+      <div class="col-lg-4 text-center">
+        <div class="owner-image">
+          <img 
+            src="{% static 'assets/assets/images/owner_manish.jpg' %}" 
+            alt="Owner Profile" 
+            class="owner-img">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--====================== About Section ========================-->
+<div id="about" class="about-us section">
+  <div class="container">
+    <div class="row">
+      <!-- Library Introduction Section -->
+      <div class="col-lg-5 align-self-center">
+        <div class="left-image">
+          <img src="{% static 'assets/assets/images/about-left-image.png' %}" alt="Two Girls working together">
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="section-heading">
+          <h2>More About <span>S2 Library</span></h2>
+          <p>
+            Join the <strong>Smart Study Library</strong> community and unlock immediate access to 
+            certified courses, a peaceful study environment, and resources that inspire success. 
+            <a href="/about">Learn More</a>.
+          </p>
+          <div class="row mt-4">
+            <div class="col-lg-4">
+              <div class="fact-item">
+                <div class="count-area-content">
+                  <div class="icon">
+                    <img src="{% static 'assets/assets/images/book.png' %}" alt="Books">
+                  </div>
+                  <div class="count-digit">50+</div>
+                  <div class="count-title">Books</div>
+                  <p>Competitive books for all learners.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="fact-item">
+                <div class="count-area-content">
+                  <div class="icon">
+                    <img src="{% static 'assets/assets/images/certificate.png' %}" alt="Courses">
+                  </div>
+                  <div class="count-digit">100+</div>
+                  <div class="count-title">Courses</div>
+                  <p>Upskilling and career-focused courses.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="fact-item">
+                <div class="count-area-content">
+                  <div class="icon">
+                    <img src="{% static 'assets/assets/images/service.png' %}" alt="Happy Students">
+                  </div>
+                  <div class="count-digit">25+</div>
+                  <div class="count-title">Happy Students</div>
+                  <p>Thriving in their learning journey.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--About more section-->
+<section id="resume" class="grey-section" style="text-align:justify;">
+  <div class="row section-intro">
+     <div class="col-twelve">
+       <h5>Our Goal</h5>
+       <p class="lead">To Provide Students a Peaceful and Encouraging Study Environment.</p>
+     </div>   		
+   </div> <!-- /section-intro--> 
+  <div class="row section-intro resume-timeline">
+    <div class="resume-header">
+     <h2>Steps towards a better Study Environment</h2>
+    </div> <!-- /resume-header -->
+    <div>
+      <div class="timeline-wrap">
+        <div class="timeline-block">
+          <div class="timeline-ico">
+            <i class="fa fa-briefcase"></i>
+          </div>
+          <div class="timeline-header">
+            <h3>INAUGURATION</h3>
+            <p>01 July 2024</p>
+          </div>
+          <div class="timeline-content">
+            <h4>Smart Study Library</h4>
+            <p>
+              Discover tranquility and knowledge at S2 Library, nestled in a picturesque and serene location. Our library offers a perfect blend of comfort and convenience, designed to cater to all your reading and studying needs. Enjoy our fully air-conditioned space, stay refreshed with cold water dispensers, and explore an extensive collection of books across various genres. We prioritize your safety with comprehensive CCTV surveillance and provide ample parking for hassle-free visits. Stay updated with daily newspapers and take advantage of our designated lunch area for a complete, enriching experience. Visit S2 Library, your sanctuary for learning and growth.   
+            </p>
+          </div>
+        </div>
+      </div> <!-- /timeline-wrap -->   			
+    </div>
+  </div> <!-- /resume-timeline -->
+</section>
+<!--====================== About Section End ====================-->
+{% endblock %}

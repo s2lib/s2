@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Success{% endblock %}
+{% block content %}
+<!-- =============== Main Banner ========================-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="alert alert-success mt-5" role="alert">
+                <h4 class="alert-heading text-center">Thank you for reaching out to us!</h4>
+                {% if messages %}
+                    <ul class="list-unstyled mt-2">
+                        {% for message in messages %}
+                            <li class="alert alert-{{ message.tags }} text-center">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <hr>
+                <p class="text-center">
+                    <a href="/about" class="btn btn-primary">Learn More About Us</a>
+                </p>
+                <p class="mb-0 text-center">
+                    In the meantime, feel free to return to the <a href="{% url 'index' %}">homepage</a>, or <a href="mailto:s2library.in@gmail.com">contact us directly via email</a> if you need further assistance.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

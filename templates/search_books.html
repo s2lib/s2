@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Book Search{% endblock %}
+{% block content %}
+<div class="container my-5">
+  <!-- Header Section -->
+  <div class="text-center mb-4">
+    <h2 class="text-primary">Find Your Favorite Book</h2>
+    <p class="text-muted">Enter the book's name and let us help you find it!</p>
+  </div>
+
+  <!-- Search Form -->
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8 col-sm-10">
+      <form method="post" action="{% url 'search_books' %}" class="p-4 shadow rounded bg-light">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input 
+            type="text" 
+            name="name" 
+            id="name" 
+            class="form-control" 
+            placeholder="Enter Your name" 
+            required>
+        </div>
+        <div class="mb-3">
+          <label for="book_name" class="form-label">Book Name</label>
+          <input 
+            type="text" 
+            name="book_name" 
+            id="book_name" 
+            class="form-control" 
+            placeholder="Enter book name" 
+            required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input 
+            type="email" 
+            name="email" 
+            id="email" 
+            class="form-control" 
+            placeholder="Enter your email" 
+            required>
+        </div>
+        <div class="d-grid">
+          <button type="submit" class="btn btn-primary btn-lg">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Search Results -->
+  {% if result %}
+    <div class="mt-5">
+      <h3 class="text-success">Search Results</h3>
+      <div class="list-group">
+        {% for book in result %}
+          <div class="list-group-item">
+            <h5 class="mb-1">{{ book.title }}</h5>
+            <p class="mb-1"><strong>Author:</strong> {{ book.author_name|join:", " }}</p>
+            <a 
+              href="https://openlibrary.org{{ book.key }}" 
+              target="_blank" 
+              class="btn btn-sm btn-outline-primary">
+              View Book
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% else %}
+    <p class="mt-4 text-center text-muted">No books found for your search query.</p>
+  {% endif %}
+</div>
+{% endblock %}
